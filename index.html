@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 4.4</title>
+</head>
+<body>
+<script>
+var fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+var citrus = ['orange', 'lemon', 'lime'];
+function displayArray(title, array) {
+  document.write(`${title}: ${array.join(', ')}<br>`);
+}
+displayArray('Масив fruits', fruits);
+displayArray('Масив citrus', citrus);
+var combinedArray = fruits.concat(citrus);
+displayArray('Об\'єднаний масив fruits', combinedArray);
+fruits.splice(3, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+displayArray('Масив fruits з додатковими елементами', fruits);
+fruits.splice(-3);
+displayArray('Масив fruits без останніх 3 елементів', fruits);
+fruits.sort();
+displayArray('Масив fruits в алфавітному порядку', fruits);
+fruits.reverse();
+displayArray('Масив fruits у зворотному алфавітному порядку', fruits);
+fruits.sort(function(a, b) {
+  return a.length - b.length;
+});
+displayArray('Масив fruits відсортований за довжиною слів', fruits);
+</script>
+</body>
+</html>
